@@ -20,10 +20,22 @@
       ];
 
       buildInputs = with pkgs; [
+        # Libraries
+        glm
+        imgui
+        stb
+        tinyobjloader
+        vk-bootstrap
+        vulkan-memory-allocator      
+
         libxkbcommon
         libGL
+        
 
         wayland
+        wayland-protocols
+
+        libGLU
 
         SDL2
         SDL2_ttf
@@ -35,6 +47,7 @@
         gcc
         kdePackages.qtwayland
         kdePackages.wayqt
+        clang
 
         pkg-config
 
@@ -43,6 +56,7 @@
         xorg.libXcursor
         xorg.libXi
         xorg.libXxf86vm
+        xorg.libXinerama
 
         cargo
 
